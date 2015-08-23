@@ -4,13 +4,15 @@
 		<title>Medical consultation</title>
 		<meta name= 'author' content='Piotr Czarny'>
 		<meta charset='iso-8859-2'>
+		
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
 	<body ng-app='app'>
 <!--		NAVBAR	-->
 		<div ng-controller='MainController as vm'>
 		</div>
 <!--		CONTENT	-->
-		<div data-ng-view='' style='background-color: #dddddd'></div>
+		<div data-ng-view=''></div>
 		
 <!--	BEGIN LIB JS	-->
 		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js'></script>
@@ -21,5 +23,6 @@
 <!--	BEGIN CUSTOM JS	-->
 		<script src='app.js'></script>
 		<script src="views/all.questions/all.questions.js"></script>
+		<script src="views/single.question/single.question.js"></script>
 	</body>
 </html>

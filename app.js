@@ -3,7 +3,8 @@
 	
 	angular.module('app', [
 		'ngRoute',
-		'all.questions'
+		'all.questions',
+		'single.question'
 	])
 		.controller('MainController', MainController);
 	
