@@ -21,3 +21,18 @@ body{
     position: absolute;
 	cursor: pointer;
 }
+
+.triangle-facing-right {
+    display: inline-block;
+    margin: 9px;
+    border-right: 5px solid; border-bottom: 5px solid;
+    width: 10px; height: 10px;
+    transform: rotate(-45deg);
+}
+.triangle-facing-left {
+    display: inline-block;
+    margin: 9px;
+    border-left: 5px solid; border-bottom: 5px solid;
+    width: 10px; height: 10px;
+    transform: rotate(45deg);
+}

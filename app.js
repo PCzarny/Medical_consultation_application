@@ -4,7 +4,8 @@
 	angular.module('app', [
 		'ngRoute',
 		'all.questions',
-		'single.question'
+		'single.question',
+		'profile'
 	])
 		.controller('MainController', MainController);
 	
