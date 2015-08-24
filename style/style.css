@@ -1,12 +1,207 @@
-body{
-	background-color: #efefef;
+body {
+	background-color: #fbfbfb;
+}
+
+.center-container {
+	width: 900px;
+	margin: auto;
+}
+
+.question-summary {
+	display: flex;
+	box-shadow: 2px 2px #eeeeee;
+	padding-bottom: 30px;
+	margin-bottom: 2px;
+	background-color: #ffffff;
+}
+
+.question-summary > div {
+	width: 100%;
+	background: #dff3fd;
+	position: relative;
+}
+
+.photo {
+	display: inline-block;
+	border-radius: 50%;
+	margin: 20px;
+}
+
+.header {
+	height: 125px;
+	width: 100%;
+}
+
+.header > div {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.info{
+	font-size: 18px;
+    color: #0266bb;
+    margin-bottom: 10px;
+
+}
+
+.question {
+	font-size:20px;
+	font-style: italic;
+	font-family: Georgia, serif;
+	color: #0266bb;
+}
+
+.question-summary .question{
+	cursor: pointer;
+}
+
+.question-summary .footer {
+	border-top: 2px solid #a7a9ac;
+	
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	display: inline-block;
+	text-align: center;
+}
+.question-summary .answered .footer {
+	border-top: 2px solid #2d2c2e;
+}
+
+.footer.asked{
+	width: 75px;
+}
+
+.footer {
+	width: calc(100% - 10px);
+}
+.details-container{
+	width: calc(100% - 85px);
+	background-color: #ffffff;
+	float: right;
+	height: 230px;
+}
+.question-summary .details-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.details-container .activity {
+	width: 140px;
+	text-align: center;
+	position: relative;
+	margin: 20px 5px 0px 5px;
+	background-color: #dddddd;
+}
+
+.details-container .more-activity {
+	width: calc(100% - (200px + 3 * 145px));
+	background-color: #ffffff;
+	margin-left: 0px;
+	margin-right: -5px;
+}
+
+.more-activity .number {
+	top: 60px;
+	position: absolute;
+	font-size: 22px;
+}
+
+.more-activity .comment {
+	position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+	background-color: #a7a9ac;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50% - 5px);
+	bottom : -5px;
+	width: 10px;
+	height: 10px
+}
+
+.answered .dot {
+	background-color: #2d2c2e;
+}
+
+.details-container .stat {
+	height: 355px;
+	bottom: 0px;
+	position: absolute;
+	flex-direction: column-reverse;
+	display: flex;
+	width: 200px;
+	right: 0px;
+	background-color: #ffffff;
+}
+
+.details-container .stat div {
+	margin-bottom: 30px;
+	margin-left: 10%;
+}
+
+/*	SINGLE QUESTION	*/
+.single-question {
+	display: flex;
+	position: relative;
+	border: 1px solid #cccccc;
+}
+.single-question > div {
+	background: #dff3fd;
+	flex:1;
+}
+.single-question .details-container, .single-question .header {
+	padding-right: 100px
+}
+
+.give-answer {
+	position: absolute;
+	left: calc(50% - 85px);
+	bottom: -15px;
+	background-color: white;
+	width: 170px;
+	border: 1px solid gray;
+	text-align: center;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.single-question .edit-bar{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.single-question .edit-bar-item{
+	display: flex;
+	align-items: center;
+	padding-right: 10px;
+	height: 230px;
+	font-weight: 600;
+}
+.single-question .edit-bar-item.header{
+	color: #0266bb;
+	height:125px;
+}
+.bold{
+	font-weight: 600;
+	font-style: italic;
+	font-family: Georgia, serif;
+}
+.arrow-bar{
+	position: relative;
+	height: 30px;
+	margin-left: 15px;
 }
 .arrow-up {
 	width: 0; 
 	height: 0; 
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-bottom: 10px solid black;
+	border-bottom: 10px solid #0266bb;
 	cursor: pointer;
 }
 
@@ -15,11 +210,51 @@ body{
 	height: 0; 
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-top: 10px solid black;
+	border-top: 10px solid #0266bb;
 	
 	bottom: 0px;
     position: absolute;
 	cursor: pointer;
+}
+
+.discussion{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.discussion-item{
+	background-color: white;
+	display: flex;
+	box-shadow: 2px -2px #eeeeee;
+}
+.discussion-item > div{
+	padding: 10px;
+}
+
+.discussion-item.next{
+	width: calc(100% - 121px);
+	float: right;
+}
+
+.inline-dot {
+	border-radius: 50%;
+    background-color: #7d8fa0;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 3px;
+}
+
+.vote-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: 10px
 }
 
 .triangle-facing-right {
