@@ -2,19 +2,33 @@
 	'use strict';
 
 	angular.module('profile', ['ngRoute'])
-		.config(['$routeProvider', function($routeProvider) {
-			$routeProvider.when('/profile/:id', {
-				templateUrl: 'views/profile/profile.html',
-				controller: 'ProfileController',
-				controllerAs: 'vm' 
-			});
-		}])
-		.controller('ProfileController', ProfileController);
+		.directive('profileModal', ProfileModal);
 	
-	ProfileController.$inject = ['$scope'];
-	function ProfileController($scope) {
-		var vm = this;
-		vm.name = 'Eva';
-		vm.question = 'Will insulin make my patient gain weight?';
+	function ProfileModal() {
+		return {
+			restrict: 'E',
+			replace: 'true',
+			link: ProfileModalLinkFunction,
+			templateUrl: 'views/profile/profile.html',
+			scope: {},
+			controller: ProfileModalController,
+			controllerAs: 'vm'
+		};
+	}
+	
+	function ProfileModalLinkFunction ($scope, $element, $attrs, $ctrl) {
+		console.log("modal created");
+		$scope.$on('showProfile', show);
+		
+		
+		function show (event, args) {
+			console.log("modal receive", $element);
+//			$element.modal('show');
+			$('.editModal').modal('show');
+		}
+	};
+	
+	function ProfileModalController () {
+		
 	}
 })();

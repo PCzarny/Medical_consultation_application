@@ -17,11 +17,16 @@
 		};
 	}
 	
-	AllQuestionsItemController.$inject = ['$scope', '$location'];
-	function AllQuestionsItemController($scope, $location) {
+	AllQuestionsItemController.$inject = ['$scope', '$location', '$rootScope'];
+	function AllQuestionsItemController($scope, $location, $rootScope) {
 		var vm = this;
 		vm.showQuestion = function () {
 			$location.path('/question/' + $scope.questionInfo.id);
+		};
+		
+		vm.showProfile = function () {
+			console.log("Show profile");
+			$rootScope.$broadcast('showProfile');
 		}
 	}
 })(angular);

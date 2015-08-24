@@ -257,17 +257,113 @@ body {
 	margin-right: 10px
 }
 
+/*	PROFILE	*/
+.profile-head {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #7b7b7b;
+}
+.profile-head .tag {
+	color: #7d8fa0;
+    font-weight: 500;
+}
+
+.flex {
+	display: flex;
+}
+.flex-justify-center{
+	display:flex;
+	justify-content: center;
+}
+.flex-middle {
+	flex: 1;
+}
+.flex-right {
+	margin-left: auto;
+}
+
+.profile-title {
+	padding: 10px;
+    font-size: 25px;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.profile-subtitle {
+	padding: 10px;
+    font-size: 13px;
+    color: #7d8fa0;
+}
+.circle-nav{
+	color: white;
+	border-radius:50%;
+	width: 35px;
+	height: 35px;
+}
+.circle-nav.active {
+	background-color: #0266b9;
+}
+.circle-nav.disactive{
+	background-color: #a7a9ac;
+}
 .triangle-facing-right {
     display: inline-block;
     margin: 9px;
-    border-right: 5px solid; border-bottom: 5px solid;
-    width: 10px; height: 10px;
+    border-right: 4px solid; border-bottom: 4px solid;
+    width: 15px;
+	height: 15px;
     transform: rotate(-45deg);
 }
 .triangle-facing-left {
     display: inline-block;
     margin: 9px;
-    border-left: 5px solid; border-bottom: 5px solid;
-    width: 10px; height: 10px;
+    border-left: 4px solid; border-bottom: 4px solid;
+    width: 15px;
+	height: 15px;
     transform: rotate(45deg);
+}
+
+.profile-mark {
+	margin: 5px;
+	width: 80px
+}
+.profile-mark .photo {
+	margin: 10px;
+}
+.stripped {
+    background: repeating-linear-gradient( -45deg, #FFF, #FFF 1px,
+		#d0d0d0 2px, #d0d0d0 2px );
+}
+
+.profile-footer {
+	position: relative;
+    margin-top: 15px;
+    padding: 10px;
+}
+.profile-footer .photo {
+	border-radius: 50%;
+	margin: auto;
+	top: -20px;
+	position: absolute;"
+}
+.footer-title {
+	margin-top: 25px;
+	font-size: 12px;
+	color: #7d8b93;
+}
+.footer-title .info {
+	font-size: 15px;
+}
+.footer-content {
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+.footer-stat{
+	display: flex;
+	justify-content: space-around;
+}
+
+.load-more {
+	color: #ff0000;
+	padding: 25px;
+	background-color: #ffffff;
 }
