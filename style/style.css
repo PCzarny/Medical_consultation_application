@@ -25,6 +25,7 @@ body {
 	display: inline-block;
 	border-radius: 50%;
 	margin: 20px;
+	cursor: pointer;
 }
 
 .header {
@@ -181,10 +182,12 @@ body {
 	padding-right: 10px;
 	height: 230px;
 	font-weight: 600;
+	justify-content: center;
 }
 .single-question .edit-bar-item.header{
 	color: #0266bb;
 	height:125px;
+	cursor: pointer;
 }
 .bold{
 	font-weight: 600;
@@ -194,7 +197,7 @@ body {
 .arrow-bar{
 	position: relative;
 	height: 30px;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 .arrow-up {
 	width: 0; 
@@ -252,9 +255,7 @@ body {
 .vote-box {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	margin-left: auto;
-	margin-right: 10px
 }
 
 /*	PROFILE	*/
@@ -340,10 +341,10 @@ body {
     padding: 10px;
 }
 .profile-footer .photo {
-	border-radius: 50%;
 	margin: auto;
 	top: -20px;
-	position: absolute;"
+	position: absolute;
+	cursor: default;
 }
 .footer-title {
 	margin-top: 25px;
@@ -366,4 +367,5 @@ body {
 	color: #ff0000;
 	padding: 25px;
 	background-color: #ffffff;
+	cursor: pointer;
 }

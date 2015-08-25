@@ -17,18 +17,27 @@
 	}
 	
 	function ProfileModalLinkFunction ($scope, $element, $attrs, $ctrl) {
-		console.log("modal created");
 		$scope.$on('showProfile', show);
 		
 		
 		function show (event, args) {
-			console.log("modal receive", $element);
-//			$element.modal('show');
+			$ctrl.userId = args;
+			$ctrl.getData();
 			$('.editModal').modal('show');
 		}
-	};
+	}
 	
-	function ProfileModalController () {
+	ProfileModalController.$inject = ['$scope', 'ProfileService'];
+	function ProfileModalController($scope, ProfileService) {
+		var vm = this;
 		
+		vm.getData = getData;
+		
+		/////////////////////////////
+		function getData() {
+			ProfileService.getById(vm.userId, function(d) {
+				vm.data = d;
+			});
+		}
 	}
 })();

@@ -4,11 +4,12 @@
 		<div class="modal-content" style="text-align: center">
 			<div class='modal-body'>
 				<div class="profile-head">
-					<img src="img\John.jpg" width="60" height="60" class='photo'>
-					<div class="info">Dr. Harrison Ford</div>
+					<img ng-src="{{vm.data.photo}}"
+						 width="60" height="60" class='photo'>
+					<div class="info">{{vm.data.name}}</div>
 					<div class='flex'>
-						<div><span class='tag'>MEMBER FOR </span>5 month</div>
-						<div class='flex-middle'><span class='tag'>LAST SEEN </span>Sturday aftrnoon</div>
+						<div><span class='tag'>MEMBER FOR </span>{{vm.data.time}}</div>
+						<div class='flex-middle'><span class='tag'>LAST SEEN </span>{{vm.data.lastSeen}}</div>
 						<div class='flex-right'><span class='tag'>ACTIVITY LEVEL </span></div>
 					</div>
 				</div>
@@ -23,7 +24,7 @@
 						</div>
 					</div>
 					<div>
-						<div class='profile-subtitle'>THAT'S WHERE WE HAVE BEEN THESE 5 MONTH AGO</div>
+						<div class='profile-subtitle'>THAT'S WHERE WE HAVE BEEN THESE {{vm.data.time | uppercase}}</div>
 						<div>
 							<div style="position: relative; display: inline-block; width: 70px; height: 70px; background: #76b1f5; transform: rotate(45deg); margin: 20px;">
 								<div style="position: absolute; transform: rotate(-45deg)">ada</div>
@@ -36,23 +37,13 @@
 					<div>
 						<div class='profile-subtitle'>WHO JOINED THE PLATFORM THAT SAME PERIOD</div>
 						<div class='flex-justify-center'>
-							<div class='profile-mark'>
+							<div ng-repeat='user in vm.data.joinedUsers'
+								 class='profile-mark'>
 								<div class='stripped'>
-									<img src="img\John.jpg" width="60" height="60" class='photo'>
+									<img ng-src="{{user.photo}}"
+										 width="60" height="60" class='photo'>
 								</div>
-								<div style='color: #0266bb'>Dr. Harrison Ford</div>
-							</div>
-							<div class='profile-mark'>
-								<div class='stripped'>
-									<img src="img\John.jpg" width="60" height="60" class='photo'>
-								</div>
-								<div style='color: #0266bb'>Dr. Harrison Ford</div>
-							</div>
-							<div class='profile-mark'>
-								<div class='stripped'>
-									<img src="img\John.jpg" width="60" height="60" class='photo'>
-								</div>
-								<div style='color: #0266bb'>Dr. Harrison Ford</div>
+								<div style='color: #0266bb'>{{user.name}}</div>
 							</div>
 						</div>
 					</div>
@@ -61,14 +52,15 @@
 			<div>
 				<div class='profile-subtitle'>HOTTEST DISCUSSION THESE DAYS</div>
 				<div class='stripped profile-footer'>
-					<img src="img\John.jpg" width="40" height="40" class="photo">
-					<div class='footer-title'><span class='info'>Andrew</span> FOUND THE GUARDIAN ARTICLE</div>
-					<div class='footer-content question'>Vegan diet to stop diabetes progress</div>
+					<img ng-src="{{vm.data.hottest.user.photo}}"
+						 width="40" height="40" class="photo">
+					<div class='footer-title'><span class='info'>{{vm.data.hottest.user.name}}</span> {{vm.data.hottest.activity | uppercase}}</div>
+					<div class='footer-content question'>{{vm.data.hottest.topic}}</div>
 					<div class='footer-stat bold'>
-						<div> 6 peers involved</div>
-						<div> 3 related discussion</div>
-						<div> 3 conversations</div>
-						<div> 19 upvotes</div>
+						<div> {{vm.data.hottest.stat.numberOfPeers}} peers involved</div>
+						<div> {{vm.data.hottest.stat.numberOfDiscussion}} related discussion</div>
+						<div> {{vm.data.hottest.stat.numberOfConversations}} conversations</div>
+						<div> {{vm.data.hottest.stat.numberOfUpvotes}} upvotes</div>
 					</div>
 				</div>
 			</div>

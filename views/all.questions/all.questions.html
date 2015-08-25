@@ -3,5 +3,5 @@
 </div>
 <div class='center-container'>
 	<all-questions-item ng-repeat='n in vm.data' question-info='n'></all-questions-item>
-	<div class='load-more'>Load more questions</div>
+	<div class='load-more' ng-click="vm.loadMore()">Load more questions</div>
 </div>

@@ -20,13 +20,14 @@
 	AllQuestionsItemController.$inject = ['$scope', '$location', '$rootScope'];
 	function AllQuestionsItemController($scope, $location, $rootScope) {
 		var vm = this;
+		vm.maxActivieties = 3;
+		
 		vm.showQuestion = function () {
 			$location.path('/question/' + $scope.questionInfo.id);
 		};
 		
-		vm.showProfile = function () {
-			console.log("Show profile");
-			$rootScope.$broadcast('showProfile');
+		vm.showProfile = function (id) {
+			$rootScope.$broadcast('showProfile', id);
 		}
 	}
 })(angular);
