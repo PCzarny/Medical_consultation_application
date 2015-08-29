@@ -16,18 +16,30 @@
 			</div>
 			<div ng-if='type === "allQuestions"' class='flex-right' style='margin-right: 50px;'>
 				<div style="display: inline-block">
-					<input type='radio' ng-model='vm.sort' value='my'> My sheif
-					<input type='radio' ng-model='vm.sort' value='all'> All questions
+					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value='true'> My shelf
+					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value=''> All questions
 				</div>
 				<div style="display:inline-block">
-					Sort by: <span>recent</span> or <span>hot</span>
+					Sort by: <span
+								   ng-click="displayOption.orderPredicate='-activities.length'">recent</span> or
+					<span ng-click="displayOption.orderPredicate='-lastUpdate'">hot</span>
 				</div>
 			</div>
 		</div>
 		<div ng-if='type === "allQuestions"'
 			 class='flex' style='align-items: center'>
 			<div><input type='text'
-						placeholder='Search questions'>
+						ng-if='!vm.searchTopics'
+						ng-model='displayOption.searchTag'
+						placeholder='Search'>
+				<input type='text'
+						ng-if='vm.searchTopics'
+						ng-model='displayOption.searchTag.question'
+						placeholder='Search question'>
+				<input type="checkbox"
+					   ng-model='vm.searchTopics'
+					   ng-change='vm.clear()'>
+					Search only in topics
 			</div>
 			<div class='flex-right'>
 			<button>Search</button>

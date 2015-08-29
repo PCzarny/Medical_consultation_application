@@ -23,6 +23,9 @@
 		activate();
 		/////////////////////////////////
 		function activate() {
+			vm.option = {};
+			vm.option.searchFollow = {follow : true};
+			vm.option.orderPredicate = '-activities.length'
 			vm.getData();
 		};
 		

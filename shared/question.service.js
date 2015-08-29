@@ -11,7 +11,7 @@
 			{
 				id : 0,
 				user : {id : 1, name: 'Anthony', photo: 'img/Anthony.jpg'},
-				question : 'Will insulin make my patient gain weight?',
+				question : '0 Will insulin make my patient gain weight?',
 				content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 				stat: {
 					numberOfConversations: 3,
@@ -19,7 +19,7 @@
 					numberOfDiscussion: 9
 				},
 				upvotes : -1,
-				lastUpdate : 'yesterday',
+				lastUpdate : 33333,
 				activities: [{
 					type: 'COMMENTED',
 					user : {id : 2, name: 'Jim', photo: 'img/Jim.jpg'},
@@ -84,14 +84,14 @@
 			},{
 				id : 1,
 				user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-				question : 'Will insulin make my patient gain weight?',
+				question : '1 Will insulin make my patient gain weight?',
 				stat: {
 					numberOfConversations: 3,
 					numberOfPeers: 5,
 					numberOfDiscussion: 9
 				},
 				upvotes : 0,
-				lastUpdate : 'yesterday',
+				lastUpdate : 111,
 				activities: [{
 					type: 'COMMENTED',
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
@@ -141,14 +141,14 @@
 			},{
 				id : 2,
 				user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-				question : 'Will insulin make my patient gain weight?',
+				question : '2 Will insulin make my patient gain weight?',
 				stat: {
 					numberOfConversations: 3,
 					numberOfPeers: 5,
 					numberOfDiscussion: 9
 				},
 				upvotes : 0,
-				lastUpdate : 'yesterday',
+				lastUpdate : 2222,
 				activities: [{
 					type: 'COMMENTED',
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
@@ -201,7 +201,7 @@
 			}];
 		
 		service.getAll = function(nr, cb) {
-			cb(data.slice(0, nr));
+			cb(data);
 		};
 		
 		service.getById = function (id, cb) {

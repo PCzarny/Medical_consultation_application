@@ -1,7 +1,10 @@
 <div>
-	<navigation-bar type='allQuestions' data='vm.data'></navigation-bar>
+	<navigation-bar type='allQuestions' data='vm.data' display-option='vm.option'></navigation-bar>
 	<div class='center-container'>
-		<all-questions-item ng-repeat='n in vm.data' question-info='n'></all-questions-item>
+		{{vm.option}}
+		<all-questions-item ng-repeat='n in vm.data
+									   | filter: vm.option.searchFollow | filter: vm.option.searchTag
+									   | orderBy: vm.option.orderPredicate | limitTo: vm.listLength' question-info='n'></all-questions-item>
 		<div class='load-more' ng-click="vm.loadMore()">Load more questions</div>
 	</div>
 </div>

@@ -11,7 +11,8 @@
 			templateUrl: 'shared/navigation-bar/navigation-bar.html',
 			scope: {
 				type : '@',
-				data : '='
+				data : '=',
+				displayOption : '='
 			},
 			controller: NavigationBarController,
 			controllerAs: 'vm',
@@ -27,11 +28,23 @@
 		var vm = this;
 		
 		vm.goBack = goBack;
+		vm.clear = clear;
 		vm.sort = 'my';
+		vm.searchTopics = true;
 		
 		///////////////////////////////
 		function goBack () {
 			window.history.back();
+		}
+		
+		function clear() {
+			//$scope.data.searchTag = '';
+			if(vm.searchTopics) {
+				$scope.displayOption.searchTag = {question: $scope.displayOption.searchTag};
+			}
+			else{
+				$scope.displayOption.searchTag = $scope.displayOption.searchTag.question;
+			}
 		}
 		
 	}
