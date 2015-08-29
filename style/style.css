@@ -88,7 +88,7 @@ body {
 }
 
 .details-container .activity {
-	width: 140px;
+	width: 120px;
 	text-align: center;
 	position: relative;
 	margin: 20px 5px 0px 5px;
@@ -96,7 +96,7 @@ body {
 }
 
 .details-container .more-activity {
-	width: calc(100% - (200px + 3 * 145px));
+	width: calc(100% - (170px + 4 * 125px));
 	background-color: #ffffff;
 	margin-left: 0px;
 	margin-right: -5px;
@@ -135,7 +135,7 @@ body {
 	position: absolute;
 	flex-direction: column-reverse;
 	display: flex;
-	width: 200px;
+	width: 170px;
 	right: 0px;
 	background-color: #ffffff;
 }
@@ -313,6 +313,7 @@ body {
     width: 15px;
 	height: 15px;
     transform: rotate(-45deg);
+	margin-right: 12px;
 }
 .triangle-facing-left {
     display: inline-block;
@@ -321,6 +322,7 @@ body {
     width: 15px;
 	height: 15px;
     transform: rotate(45deg);
+	margin-left: 12px;
 }
 
 .profile-mark {
@@ -368,4 +370,17 @@ body {
 	padding: 25px;
 	background-color: #ffffff;
 	cursor: pointer;
+}
+
+.navigation{
+	    position: relative;
+    top: 0px;
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

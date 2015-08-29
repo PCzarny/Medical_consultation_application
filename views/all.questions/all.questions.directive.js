@@ -20,7 +20,7 @@
 	AllQuestionsItemController.$inject = ['$scope', '$location', '$rootScope'];
 	function AllQuestionsItemController($scope, $location, $rootScope) {
 		var vm = this;
-		vm.maxActivieties = 3;
+		vm.maxActivieties = 4;
 		
 		vm.showQuestion = function () {
 			$location.path('/question/' + $scope.questionInfo.id);

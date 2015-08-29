@@ -9,8 +9,20 @@
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
 	<body ng-app='app'>
-<!--		NAVBAR	-->
-		<div ng-controller='MainController as vm'>
+<!--		NAVIGATION	-->
+		<div class='navigation' ng-controller='MainController as vm'>
+			
+			<div class="circle-nav" style="border: 1px solid gray;">
+			<span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+			<div>Quesetions</div>
+			<div class="circle-nav active"></div>
+<!--
+			<ul>
+				<li><span>Questions</span></li>
+				<li><div class="circle-nav active"></div></li>
+				<li></li>
+			</ul>
+-->
 		</div>
 <!--		CONTENT	-->
 		<div data-ng-view=''></div>
