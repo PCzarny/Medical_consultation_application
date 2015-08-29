@@ -295,34 +295,21 @@ body {
     color: #7d8fa0;
 }
 .circle-nav{
-	color: white;
 	border-radius:50%;
 	width: 35px;
 	height: 35px;
 }
 .circle-nav.active {
 	background-color: #0266b9;
+	color: #ffffff;
 }
 .circle-nav.disactive{
 	background-color: #a7a9ac;
+	color: #ffffff;
 }
-.triangle-facing-right {
-    display: inline-block;
-    margin: 9px;
-    border-right: 4px solid; border-bottom: 4px solid;
-    width: 15px;
-	height: 15px;
-    transform: rotate(-45deg);
-	margin-right: 12px;
-}
-.triangle-facing-left {
-    display: inline-block;
-    margin: 9px;
-    border-left: 4px solid; border-bottom: 4px solid;
-    width: 15px;
-	height: 15px;
-    transform: rotate(45deg);
-	margin-left: 12px;
+.circle-nav span{
+	top: calc(50% - 14px);
+	font-size: 25px;
 }
 
 .profile-mark {
@@ -373,7 +360,7 @@ body {
 }
 
 .navigation{
-	    position: relative;
+	position: relative;
     top: 0px;
     height: 100px;
     background-color: white;
@@ -381,6 +368,22 @@ body {
     margin-bottom: 10px;
     z-index: 100;
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.navigation .back-button {
+	border: 1px solid gray;
+    text-align: center;
+    color: gray;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+	
+	margin-left: 50px;
+}
+
+.navigation .back-button .glyphicon {
+	font-size: 25px;
+    top: calc(50% - 14px);
 }

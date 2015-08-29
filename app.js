@@ -11,9 +11,5 @@
 	
 	function MainController ($scope) {
 		var vm = this;
-		
-		$(window).scroll(function () {
-			$('.navigation').css('top', $(window).scrollTop());
-		});
 	}
 })();
