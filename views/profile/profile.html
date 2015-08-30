@@ -3,15 +3,19 @@
 		<!-- Modal content-->
 		<div class="modal-content" style="text-align: center">
 			<div class='modal-body'>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<div class="profile-head">
 					<img ng-src="{{vm.data.photo}}"
 						 style="cursor: default"
 						 width="60" height="60" class='photo'>
-					<div class="info">{{vm.data.name}}</div>
+					<div class="info"><span class='name'>{{vm.data.name}}</span></div>
 					<div class='flex'>
-						<div><span class='tag'>MEMBER FOR </span>{{vm.data.time}}</div>
-						<div class='flex-middle'><span class='tag'>LAST SEEN </span>{{vm.data.lastSeen}}</div>
-						<div class='flex-right'><span class='tag'>ACTIVITY LEVEL </span>
+						<div class='tag'>MEMBER FOR </div>
+						<div>{{vm.data.time}}</div>
+						<div class='tag'>LAST SEEN </div>
+						<div>{{vm.data.lastSeen}}</div>
+						<div class='tag'>ACTIVITY LEVEL </div>
+						<div>
 							<span ng-repeat="i in vm.getNumber(3) track by $index"
 								  ng-class="($index < vm.data.activityLevel) ?
 											'glyphicon glyphicon-certificate level' :
@@ -78,8 +82,12 @@
 				<div class='stripped profile-footer'>
 					<img ng-src="{{vm.data.hottest.user.photo}}"
 						 width="40" height="40" class="photo">
-					<div class='footer-title'><span class='info'>{{vm.data.hottest.user.name}}</span> {{vm.data.hottest.activity | uppercase}}</div>
-					<div class='footer-content question'>{{vm.data.hottest.topic}}</div>
+					<div class='footer-title'>
+						<span class='name'
+							  ng-click='vm.showProfile(vm.data.hottest.user.id)'>{{vm.data.hottest.user.name}}</span>
+						<span class='info-label'>{{vm.data.hottest.label | uppercase}}</span>
+					</div>
+					<div class='footer-content question'>{{vm.data.hottest.question}}</div>
 					<div class='footer-stat bold'>
 						<div> {{vm.data.hottest.stat.numberOfPeers}} peers involved</div>
 						<div> {{vm.data.hottest.stat.numberOfDiscussion}} related discussion</div>

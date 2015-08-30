@@ -12,7 +12,7 @@
 							<span class='name'
 								  ng-click='vm.showProfile(vm.data.user.id)'>
 								{{vm.data.user.name}}</span>
-							<span class='label'>{{vm.data.label | uppercase}}:</span>
+							<span class='info-label'>{{vm.data.label | uppercase}}:</span>
 						</div>
 						<div class='question'>
 							{{vm.data.question}}
@@ -64,7 +64,7 @@
 						<span class='name'
 							  ng-click='vm.showProfile(conversationItem.user.id)'>
 							{{conversationItem.user.name}}</span>
-						<span class='label'> COMMENTED IT</span>
+						<span class='info-label'> COMMENTED IT</span>
 						<div class='inline-dot'></div>
 						<span class="bold" style="font-size: 15px;color: #000000;">{{conversationItem.time}}</span>
 					</div>

@@ -46,12 +46,12 @@ body {
 	white-space: normal;
 }
 
-.info .name {
+.name {
 	font-size: 18px;
     color: #0266bb;
 	cursor: pointer;
 }
-.info .label {
+.info .info-label {
 	font-size:12px;
 	color:#7d8fa0;
 }
@@ -285,9 +285,15 @@ body {
 	padding-bottom: 10px;
 	border-bottom: 2px solid #7b7b7b;
 }
+.profile-head .flex {
+	justify-content: space-around;
+}
+.profile-head .flex div {
+	font-weight: 600;
+}
 .profile-head .tag {
 	color: #7d8fa0;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 span.level {
 	color: #fa8b81;
@@ -295,6 +301,7 @@ span.level {
 span.non-level {
 	color: #cfd1d3;
 }
+
 .flex {
 	display: flex;
 }
@@ -323,7 +330,8 @@ span.non-level {
 }
 .profile-stat {
 	display: flex;
-	height: 100px;
+	margin-top: 20px;
+    margin-bottom: 20px;
 	align-items: center;
 	justify-content: space-around;
 }
@@ -341,6 +349,8 @@ span.non-level {
 .profile-stat-item{
 	width: 80px;
 	z-index: 10;
+	margin-top: 20px;
+    margin-bottom: 20px;
 }
 .circle-nav{
 	border-radius:50%;
@@ -617,5 +627,19 @@ span.non-level {
 	.discussion-item.next {
 		width: 100%;
 		border-left: 6px solid #bbbbbb;
+	}
+}
+
+/*	Prolife	*/
+@media screen and (max-width:600px) {
+	.profile-head .flex {
+		flex-direction: column;
+	}
+	.profile-stat,  .profile-footer .footer-stat {
+		flex-wrap: wrap;
+	}
+	.profile-mark .photo {
+		width: 50px;
+		height: 50px;
 	}
 }
