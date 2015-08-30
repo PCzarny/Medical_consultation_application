@@ -5,12 +5,19 @@
 			<div class='modal-body'>
 				<div class="profile-head">
 					<img ng-src="{{vm.data.photo}}"
+						 style="cursor: default"
 						 width="60" height="60" class='photo'>
 					<div class="info">{{vm.data.name}}</div>
 					<div class='flex'>
 						<div><span class='tag'>MEMBER FOR </span>{{vm.data.time}}</div>
 						<div class='flex-middle'><span class='tag'>LAST SEEN </span>{{vm.data.lastSeen}}</div>
-						<div class='flex-right'><span class='tag'>ACTIVITY LEVEL </span></div>
+						<div class='flex-right'><span class='tag'>ACTIVITY LEVEL </span>
+							<span ng-repeat="i in vm.getNumber(3) track by $index"
+								  ng-class="($index < vm.data.activityLevel) ?
+											'glyphicon glyphicon-certificate level' :
+											'glyphicon glyphicon-certificate non-level'">
+							</span>
+						</div>
 					</div>
 				</div>
 				<div>
@@ -24,7 +31,7 @@
 						</div>
 					</div>
 					<div>
-						<div class='profile-subtitle'>THAT'S WHERE WE HAVE BEEN THESE {{vm.data.time | uppercase}}</div>
+						<div class='profile-subtitle'>THAT'S WHERE WE HAVE BEEN THESE {{vm.data.time | uppercase}} AGO</div>
 						<div class='profile-stat background-divs'>
 							<div style="transform: rotate(45deg);"></div>
 							<div style="transform: rotate(-20deg);"></div>
@@ -57,7 +64,8 @@
 								 class='profile-mark'>
 								<div class='stripped'>
 									<img ng-src="{{user.photo}}"
-										 width="60" height="60" class='photo'>
+										 width="60" height="60" class='photo'
+										 ng-click='vm.showProfile(user.id)'>
 								</div>
 								<div style='color: #0266bb'>{{user.name}}</div>
 							</div>

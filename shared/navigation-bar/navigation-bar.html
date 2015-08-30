@@ -11,38 +11,41 @@
 			<div class='circle-nav active' style="text-align:center; margin-left: 20px;">
 				<span class="glyphicon glyphicon-plus" style="top: calc(50% - 11px); font-size: 19px;" aria-hidden="true"></span>
 			</div>
-			<div ng-if='type === "singleQuestion"' class='flex-right' style='margin-right: 50px; font-family: Georgia, serif;font-style:italic;'>
-				Last time discussed <strong>{{data.lastUpdate}}</strong>
+			<div ng-if='type === "singleQuestion"' class='flex-right bold'>
+				Last time discussed <strong style="font-size: 18px">{{data.lastUpdate}}</strong>
 			</div>
-			<div ng-if='type === "allQuestions"' class='flex-right' style='margin-right: 50px;'>
-				<div style="display: inline-block">
+			<div ng-if='type === "allQuestions"' class='flex-right'>
+				<div class='search-in'>
 					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value='true'> My shelf
 					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value=''> All questions
 				</div>
-				<div style="display:inline-block">
-					Sort by: <span
+				<div class='sort-by'>
+					Sort by: <span ng-class="(displayOption.orderPredicate === '-activities.length') ? 'active' : 'disactive'"
 								   ng-click="displayOption.orderPredicate='-activities.length'">recent</span> or
-					<span ng-click="displayOption.orderPredicate='-lastUpdate'">hot</span>
+					<span ng-class="(displayOption.orderPredicate === '-lastUpdate') ? 'active' : 'disactive'"
+						  ng-click="displayOption.orderPredicate='-lastUpdate'">hot</span>
 				</div>
 			</div>
 		</div>
 		<div ng-if='type === "allQuestions"'
 			 class='flex' style='align-items: center'>
-			<div><input type='text'
+			<div class='flex-middle'
+				 ><input type='text'
+						class='form-control'
 						ng-if='!vm.searchTopics'
 						ng-model='displayOption.searchTag'
 						placeholder='Search'>
 				<input type='text'
+					   class='form-control'
 						ng-if='vm.searchTopics'
 						ng-model='displayOption.searchTag.question'
 						placeholder='Search question'>
+			</div>
+			<div class='flex-right'>
 				<input type="checkbox"
 					   ng-model='vm.searchTopics'
 					   ng-change='vm.clear()'>
 					Search only in topics
-			</div>
-			<div class='flex-right'>
-			<button>Search</button>
 			</div>
 		</div>
 	</div>

@@ -27,17 +27,27 @@
 		}
 	}
 	
-	ProfileModalController.$inject = ['$scope', 'ProfileService'];
-	function ProfileModalController($scope, ProfileService) {
+	ProfileModalController.$inject = ['$scope', 'ProfileService', '$rootScope'];
+	function ProfileModalController($scope, ProfileService, $rootScope) {
 		var vm = this;
 		
 		vm.getData = getData;
+		vm.showProfile = showProfile;
+		vm.getNumber = getNumber;
 		
 		/////////////////////////////
 		function getData() {
 			ProfileService.getById(vm.userId, function(d) {
 				vm.data = d;
 			});
+		}
+		
+		function showProfile(id) {
+			$rootScope.$broadcast('showProfile', id);
+		}
+		
+		function getNumber (number) {
+    		return new Array(number);   
 		}
 	}
 })();

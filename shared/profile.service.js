@@ -11,6 +11,8 @@
 			id : 0,
 			name : 'Johnny',
 			photo : 'img/JohnnyDepp.jpg',
+			lastSeen : 'Saturday afternoon',
+			activityLevel : 1,
 			stat: {
 				numberOfPeers : 6,
 				numberOfDiscussion : 3,

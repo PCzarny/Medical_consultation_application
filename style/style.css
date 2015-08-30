@@ -267,7 +267,12 @@ body {
 	color: #7d8fa0;
     font-weight: 500;
 }
-
+span.level {
+	color: #fa8b81;
+}
+span.non-level {
+	color: #cfd1d3;
+}
 .flex {
 	display: flex;
 }
@@ -407,4 +412,34 @@ body {
 .navigation .back-button .glyphicon {
 	font-size: 25px;
     top: calc(50% - 14px);
+}
+
+.navigation .sort-by {
+	display: inline-block;
+	font-style: italic;
+}
+.navigation .sort-by .disactive {
+	font-style: normal;
+	font-weight: bold;
+	color: #0266b9;
+	cursor: pointer;
+}
+.navigation .sort-by .active {
+	font-style: normal;
+	color: #aaaaaa;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.navigation .search-in {
+	display: inline-block;
+	margin-right: 50px;
+	font-weight: bold;
+}
+.navigation .search-in > input {
+	margin-left: 10px;
+}
+
+.navigation .flex-right {
+	margin-right: 50px;
+	padding-left: 15px;
 }
