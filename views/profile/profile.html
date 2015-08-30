@@ -25,13 +25,29 @@
 					</div>
 					<div>
 						<div class='profile-subtitle'>THAT'S WHERE WE HAVE BEEN THESE {{vm.data.time | uppercase}}</div>
-						<div>
-							<div style="position: relative; display: inline-block; width: 70px; height: 70px; background: #76b1f5; transform: rotate(45deg); margin: 20px;">
-								<div style="position: absolute; transform: rotate(-45deg)">ada</div>
+						<div class='profile-stat background-divs'>
+							<div style="transform: rotate(45deg);"></div>
+							<div style="transform: rotate(-20deg);"></div>
+							<div style="transform: rotate(45deg);"></div>
+							<div style="transform: rotate(15deg);"></div>
+						</div>
+						<div class='profile-stat' style="width:100%">
+							<div class='profile-stat-item bold'>
+								<div>{{vm.data.stat.numberOfPeers}}</div>
+								<div>peers</div>
 							</div>
-							<div style="position: relative; display: inline-block; width: 70px; height: 70px; background: #76b1f5; transform: rotate(-10deg); margin: 20px;"></div>
-							<div style="position: relative; display: inline-block; width: 70px; height: 70px; background: #76b1f5; transform: rotate(45deg); margin: 20px;"></div>
-							<div style="position: relative; display: inline-block; width: 70px; height: 70px; background: #76b1f5; transform: rotate(10deg); margin: 20px;"></div>
+							<div class='profile-stat-item bold'>
+								<div>{{vm.data.stat.numberOfDiscussion}}</div>
+								<div>discussion</div>
+							</div>
+							<div class='profile-stat-item bold'>
+								<div>{{vm.data.stat.numberOfQuestions}}</div>
+								<div>findings</div>
+							</div>
+							<div class='profile-stat-item bold'>
+								<div>{{vm.data.stat.numberOfFindings}}</div>
+								<div>questions</div>
+							</div>
 						</div>
 					</div>
 					<div>
