@@ -11,6 +11,8 @@
 			{
 				id : 0,
 				user : {id : 1, name: 'Anthony', photo: 'img/Anthony.jpg'},
+				label : 'Found The guardian article',
+				shortLabel: 'Found',
 				question : '0 Will insulin make my patient gain weight?',
 				content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 				stat: {
@@ -84,6 +86,8 @@
 			},{
 				id : 1,
 				user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
+				label : 'is asking',
+				shortLabel: 'asked',
 				question : '1 Will insulin make my patient gain weight?',
 				stat: {
 					numberOfConversations: 3,
@@ -110,36 +114,38 @@
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
 					time : "1 hour ago",
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
-					upvoted : 0
+					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
 					time : "1 hour ago",
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
-					upvoted : 0
+					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
 					time : "1 hour ago",
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
-					upvoted : 0
+					upvotes : 0
 				}],[{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
 					time : "1 hour ago",
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
-					upvoted : 0
+					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
 					time : "1 hour ago",
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
-					upvoted : 0
+					upvotes : 0
 				}]
 				],
 				follow : true
 			},{
 				id : 2,
+				label : 'is asking',
+				shortLabel: 'asked',
 				user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
 				question : '2 Will insulin make my patient gain weight?',
 				stat: {

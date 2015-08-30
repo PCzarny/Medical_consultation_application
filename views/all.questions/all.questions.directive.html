@@ -1,12 +1,12 @@
 <div class='question-summary'>
 	<div>
-		<div class='header'>
+		<div class='header flex'>
 			<img ng-src='{{questionInfo.user.photo}}'
 				 ng-click="vm.showProfile(questionInfo.user.id)"
 				 width='60' height='60' class='photo'>
 			<div>
 				<div class='info'>{{questionInfo.user.name}}
-					<span style="font-size:12px; color:#7d8fa0;">IS ASKING:</span>
+					<span style="font-size:12px; color:#7d8fa0;">{{questionInfo.label | uppercase}}:</span>
 				</div>
 				<div class='question'
 					 ng-click='vm.showQuestion()'>
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		</div>
-		<div class='footer asked'>ASKED</div>
+		<div class='footer asked'>{{questionInfo.shortLabel | uppercase}}</div>
 		<div class="details-container">
 			<div class="activity more-activity"
 				 ng-show='questionInfo.activities.length > vm.maxActivieties'>
@@ -23,7 +23,7 @@
 				<div class='dot'></div>
 			</div>
 
-			<div ng-repeat='activity in questionInfo.activities.slice(0, vm.maxActivieties)'
+			<div ng-repeat='activity in vm.showActivities'
 				 ng-class='activity.type === "ANSWERED" ? "activity answered" : "activity commented"'>
 				<img ng-src='{{activity.user.photo}}'
 					 ng-click="vm.showProfile(activity.user.id)"

@@ -7,17 +7,17 @@
 
 	<div class='flex-middle' style="margin-left: 100px;">
 		<div class='flex' style='align-items: center'>
-			<div style="font-size: 30px;font-weight: 600;">QUESTIONS</div>
-			<div class='circle-nav active' style="text-align:center; margin-left: 20px;">
-				<span class="glyphicon glyphicon-plus" style="top: calc(50% - 11px); font-size: 19px;" aria-hidden="true"></span>
+			<div class='nav-header'>QUESTIONS</div>
+			<div class='circle-nav active'>
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</div>
 			<div ng-if='type === "singleQuestion"' class='flex-right bold'>
 				Last time discussed <strong style="font-size: 18px">{{data.lastUpdate}}</strong>
 			</div>
 			<div ng-if='type === "allQuestions"' class='flex-right'>
 				<div class='search-in'>
-					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value='true'> My shelf
-					<input type='radio' ng-model='displayOption.searchFollow.follow' ng-value=''> All questions
+					<span><input type='radio' ng-model='displayOption.searchFollow.follow' ng-value='true'> My shelf</span>
+					<span><input type='radio' ng-model='displayOption.searchFollow.follow' ng-value=''> All questions</span>
 				</div>
 				<div class='sort-by'>
 					Sort by: <span ng-class="(displayOption.orderPredicate === '-activities.length') ? 'active' : 'disactive'"
@@ -29,17 +29,22 @@
 		</div>
 		<div ng-if='type === "allQuestions"'
 			 class='flex' style='align-items: center'>
-			<div class='flex-middle'
-				 ><input type='text'
+			<div class='flex-middle search-box'
+				 >
+				<div>
+					<input type='text'
 						class='form-control'
 						ng-if='!vm.searchTopics'
 						ng-model='displayOption.searchTag'
 						placeholder='Search'>
-				<input type='text'
+				</div>
+				<div>
+					<input type='text'
 					   class='form-control'
 						ng-if='vm.searchTopics'
 						ng-model='displayOption.searchTag.question'
 						placeholder='Search question'>
+				</div>
 			</div>
 			<div class='flex-right'>
 				<input type="checkbox"

@@ -3,7 +3,7 @@
 	<div class='center-container'>
 		<div class="single-question">
 			<div>
-				<div class='header'>
+				<div class='header flex'>
 					<img ng-src='{{vm.data.user.photo}}'
 						 ng-click='vm.showProfile(vm.data.user.id)'
 						 width='60' height='60' class='photo'>
@@ -23,21 +23,21 @@
 				<div class='give-answer'>
 					GIVE new answer
 				</div>
-				<div class='edit-bar'>
-					<div class='edit-bar-item header'
-						 ng-click='vm.toggleFollow()'>
-						{{vm.data.follow  ? 'unfollow' : 'follow'}}
-					</div>
-					<div class='edit-bar-item bold'>
-						{{vm.data.upvotes < 0 ?
-							-vm.data.upvotes + ' downvotes' :
-							vm.data.upvotes + ' upvotes'}}
-						<div class='arrow-bar'>
-							<div class='arrow-up'
-								 ng-click='vm.voteQuestion(1)'></div>
-							<div class='arrow-down'
-								 ng-click='vm.voteQuestion(-1)'></div>
-						</div>
+			</div>
+			<div class='edit-bar'>
+				<div class='edit-bar-item header'
+					 ng-click='vm.toggleFollow()'>
+					{{vm.data.follow  ? 'unfollow' : 'follow'}}
+				</div>
+				<div class='edit-bar-item bold'>
+					{{vm.data.upvotes < 0 ?
+						-vm.data.upvotes + ' downvotes' :
+						vm.data.upvotes + ' upvotes'}}
+					<div class='arrow-bar'>
+						<div class='arrow-up'
+							 ng-click='vm.voteQuestion(1)'></div>
+						<div class='arrow-down'
+							 ng-click='vm.voteQuestion(-1)'></div>
 					</div>
 				</div>
 			</div>
