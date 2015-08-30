@@ -39,12 +39,22 @@ body {
 }
 
 .info{
-	font-size: 18px;
-    color: #0266bb;
     margin-bottom: 10px;
-
 }
 
+.info span {
+	white-space: normal;
+}
+
+.info .name {
+	font-size: 18px;
+    color: #0266bb;
+	cursor: pointer;
+}
+.info .label {
+	font-size:12px;
+	color:#7d8fa0;
+}
 .question {
 	font-size:20px;
 	font-style: italic;
@@ -156,7 +166,7 @@ body {
 	flex:1;
 }
 .single-question .details-container, .single-question .header {
-	padding-right: 100px
+	padding-right: 130px
 }
 
 .give-answer {
@@ -239,6 +249,7 @@ body {
 }
 .discussion-item > div{
 	padding: 10px;
+	padding-bottom: 18px;
 }
 
 .discussion-item.next{
@@ -246,6 +257,12 @@ body {
 	float: right;
 }
 
+.discussion-item .comment-photo {
+	border-right: 1px solid #eeeeee;
+}
+.discussion-item .info .photo {
+		display: none;
+}
 .inline-dot {
 	border-radius: 50%;
     background-color: #7d8fa0;
@@ -390,6 +407,7 @@ span.non-level {
 	cursor: pointer;
 }
 
+/*	Navigation bar	*/
 .navigation{
 	position: relative;
     top: 0px;
@@ -551,9 +569,20 @@ span.non-level {
 }
 
 /*	Single question*/
+@media screen and (max-width: 660px){
+	.discussion-item .comment-photo .photo {
+		margin: 10px;
+	}
+	.discussion-item.next{
+		width: calc(100% - 101px);
+	}
+}
 @media screen and (max-width: 480px){
 	.single-question {
 		flex-direction: column;
+	}
+	.single-question .photo {
+		margin: 10px;
 	}
 	.single-question .edit-bar{
 		position: inherit;
@@ -570,5 +599,23 @@ span.non-level {
 	}		
 	.details-container {
 		width: 100%;
+	}
+	.discussion-item {
+		flex-direction: column;
+	}
+	.discussion-item .comment-photo {
+		display: none;
+	}
+	.discussion-item .info .photo {
+		display: inline-block;
+		margin: 5px;
+		float: left;
+	}
+	.discussion-item span {
+		white-space: nowrap;
+	}
+	.discussion-item.next {
+		width: 100%;
+		border-left: 6px solid #bbbbbb;
 	}
 }
