@@ -12,7 +12,7 @@
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 			</div>
 			<div ng-if='type === "singleQuestion"' class='flex-right bold'>
-				Last time discussed <strong style="font-size: 18px">{{data.lastUpdate}}</strong>
+				Last time discussed <strong style="font-size: 18px">{{data.lastUpdate | date:"yyyy-MM-dd HH:mm"}}</strong>
 			</div>
 			<div ng-if='type === "allQuestions"' class='flex-right'>
 				<div class='search-in'>

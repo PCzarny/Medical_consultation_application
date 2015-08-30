@@ -95,7 +95,7 @@
 					numberOfDiscussion: 9
 				},
 				upvotes : 0,
-				lastUpdate : 111,
+				lastUpdate : new Date('2015-08-22T10:58:00'),
 				activities: [{
 					type: 'COMMENTED',
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
@@ -112,31 +112,31 @@
 				conversations : [[{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-22T09:58:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-22T10:15:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-22T10:25:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				}],[{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T10:30:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 0,
 					user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-22T10:58:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				}]
@@ -146,15 +146,15 @@
 				id : 2,
 				label : 'is asking',
 				shortLabel: 'asked',
-				user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-				question : '2 Will insulin make my patient gain weight?',
+				user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
+				question : 'Will insulin make my patient gain weight?',
 				stat: {
 					numberOfConversations: 3,
 					numberOfPeers: 5,
 					numberOfDiscussion: 9
 				},
 				upvotes : 0,
-				lastUpdate : 2222,
+				lastUpdate : new Date('2015-08-01T11:51:00'),
 				activities: [{
 					type: 'COMMENTED',
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
@@ -174,31 +174,31 @@
 				conversations : [[{
 					id : 0,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T10:32:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 1,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T10:55:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 2,
 					user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T10:58:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				}],[{
 					id : 3,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T11:01:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				},{
 					id : 4,
 					user : {id : 1, name : 'Anthony', photo : 'img/Anthony.jpg'},
-					time : "1 hour ago",
+					time : new Date('2015-08-01T11:51:00'),
 					content : "Numbers of tingling in your feet should be reported to your doctor at your regular visits",
 					upvotes : 0
 				}]
