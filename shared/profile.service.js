@@ -26,7 +26,7 @@
 			],
 			hottest : {
 				id : 0,
-				user : {id : 2, name: 'Dr Animal', photo: 'img/Animal.jpg'},
+				user : {id : 3, name: 'Dr Animal', photo: 'img/Animal.jpg'},
 				label : 'FOUND THE GUARDIAN ARTICLE',
 				question: 'Vegan diet to stop diabetes progress',
 				stat: {
@@ -56,7 +56,7 @@
 			],
 			hottest : {
 				id : 0,
-				user : {id : 2, name: 'Dr Animal', photo: 'img/Animal.jpg'},
+				user : {id : 0, name: 'Johnny', photo: 'img/JohnnyDepp.jpg'},
 				label : 'FOUND THE GUARDIAN ARTICLE',
 				question: 'Vegan diet to stop diabetes progress',
 				stat: {
@@ -86,7 +86,7 @@
 			],
 			hottest : {
 				id : 0,
-				user : {id : 2, name: 'Dr Animal', photo: 'img/Animal.jpg'},
+				user : {id : 0, name: 'Johnny', photo: 'img/JohnnyDepp.jpg'},
 				label : 'FOUND THE GUARDIAN ARTICLE',
 				question: 'Vegan diet to stop diabetes progress',
 				stat: {
@@ -116,7 +116,7 @@
 			],
 			hottest : {
 				id : 0,
-				user : {id : 2, name: 'Dr Animal', photo: 'img/Animal.jpg'},
+				user : {id : 2, name: 'Jim', photo: 'img/Jim.jpg'},
 				label : 'FOUND THE GUARDIAN ARTICLE',
 				question: 'Vegan diet to stop diabetes progress',
 				stat: {

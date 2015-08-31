@@ -20,10 +20,10 @@
 					<span><input type='radio' ng-model='displayOption.searchFollow.follow' ng-value=''> All questions</span>
 				</div>
 				<div class='sort-by'>
-					Sort by: <span ng-class="(displayOption.orderPredicate === '-activities.length') ? 'active' : 'disactive'"
-								   ng-click="displayOption.orderPredicate='-activities.length'">recent</span> or
-					<span ng-class="(displayOption.orderPredicate === '-lastUpdate') ? 'active' : 'disactive'"
-						  ng-click="displayOption.orderPredicate='-lastUpdate'">hot</span>
+					Sort by: <span ng-class="(displayOption.orderPredicate === '-lastUpdate') ? 'active' : 'disactive'"
+								   ng-click="displayOption.orderPredicate='-lastUpdate'">recent</span> or
+					<span ng-class="(displayOption.orderPredicate === '-activities.length') ? 'active' : 'disactive'"
+						  ng-click="displayOption.orderPredicate='-activities.length'">hot</span>
 				</div>
 			</div>
 		</div>
